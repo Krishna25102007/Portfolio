@@ -437,48 +437,36 @@
             background: rgba(2, 6, 23, 0.5);
             color: var(--brand, var(--text-color));
             border: 1px solid var(--brand, var(--secondary-blue));
-            width: 65px;
-            height: 65px;
+            width: 80px;
+            height: 80px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 2.2rem;
-            border-radius: 10px;
+            border-radius: 12px;
             cursor: default;
             transition: all 0.3s;
             position: relative;
+            padding: 8px;
+            gap: 6px;
         }
 
         .skill-tag i {
+            font-size: 1.8rem;
             filter: drop-shadow(0 0 3px var(--brand, transparent));
             transition: all 0.3s;
         }
 
-        .skill-tag::after {
-            content: attr(data-name);
-            position: absolute;
-            bottom: -35px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--bg-color);
-            border: 1px solid var(--brand, var(--primary-blue));
-            color: var(--brand, #fff);
-            padding: 4px 8px;
-            font-size: 0.8rem;
-            border-radius: 4px;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s;
-            white-space: nowrap;
-            z-index: 20;
+        .skill-name {
+            font-size: 0.6rem;
             font-family: 'Share Tech Mono', monospace;
-            box-shadow: 0 0 10px var(--brand, rgba(0, 240, 255, 0.5));
-            text-shadow: 0 0 5px var(--brand, transparent);
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-color);
         }
 
-        .skill-tag:hover::after {
-            opacity: 1;
-        }
 
         .skill-tag:hover {
             box-shadow: 0 0 20px var(--brand, var(--primary-blue)), inset 0 0 10px var(--brand, var(--primary-blue));
@@ -790,9 +778,17 @@
             }
 
             .skill-tag {
-                width: 55px;
-                height: 55px;
-                font-size: 1.8rem;
+                width: 70px;
+                height: 70px;
+                gap: 4px;
+            }
+
+            .skill-tag i {
+                font-size: 1.5rem;
+            }
+
+            .skill-name {
+                font-size: 0.55rem;
             }
 
             .hero-contact a {
@@ -850,7 +846,7 @@
             <p class="subtitle">Cybersecurity Enthusiast & Developer</p>
             <div class="hero-contact">
                 <a href="mailto:singhkrishna25102007@gmail.com" target="_blank">[ Email ]</a>
-                <a href="https://www.linkedin.com/in/krishna-kumar-singh-268a17294/" target="_blank">[ LinkedIn ]</a>
+                <a href="https://www.linkedin.com/in/krishna-kumarsingh/" target="_blank">[ LinkedIn ]</a>
                 <a href="https://github.com/Krishna25102007" target="_blank">[ GitHub ]</a>
                 <a href="tel:+919598207781">[ +91-9598207781 ]</a>
             </div>
@@ -865,74 +861,124 @@
                 <div class="skill-category reveal">
                     <h3>Programming</h3>
                     <div class="skill-tags">
-                        <div class="skill-tag" data-name="Python" style="--brand: #FFD43B;"><i
-                                class="devicon-python-plain"></i></div>
-                        <div class="skill-tag" data-name="C" style="--brand: #A8B9CC;"><i class="devicon-c-plain"></i>
+                        <div class="skill-tag" data-name="Python" style="--brand: #FFD43B;">
+                            <i class="devicon-python-plain"></i>
+                            <span class="skill-name">Python</span>
                         </div>
-                        <div class="skill-tag" data-name="C++" style="--brand: #00599C;"><i
-                                class="devicon-cplusplus-plain"></i></div>
-                        <div class="skill-tag" data-name="Java" style="--brand: #ED8B00;"><i
-                                class="devicon-java-plain"></i></div>
-                        <div class="skill-tag" data-name="DSA" style="--brand: #10b981;"><i
-                                class="fa-solid fa-diagram-project"></i></div>
+                        <div class="skill-tag" data-name="C" style="--brand: #A8B9CC;">
+                            <i class="devicon-c-plain"></i>
+                            <span class="skill-name">C</span>
+                        </div>
+                        <div class="skill-tag" data-name="C++" style="--brand: #00599C;">
+                            <i class="devicon-cplusplus-plain"></i>
+                            <span class="skill-name">C++</span>
+                        </div>
+                        <div class="skill-tag" data-name="Java" style="--brand: #ED8B00;">
+                            <i class="devicon-java-plain"></i>
+                            <span class="skill-name">Java</span>
+                        </div>
+                        <div class="skill-tag" data-name="DSA" style="--brand: #10b981;">
+                            <i class="fa-solid fa-diagram-project"></i>
+                            <span class="skill-name">DSA</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="skill-category reveal">
                     <h3>Frameworks / Core Cyber</h3>
                     <div class="skill-tags">
-                        <div class="skill-tag" data-name="HTML5" style="--brand: #E34F26;"><i
-                                class="devicon-html5-plain"></i></div>
-                        <div class="skill-tag" data-name="CSS3" style="--brand: #1572B6;"><i
-                                class="devicon-css3-plain"></i></div>
-                        <div class="skill-tag" data-name="NIST" style="--brand: #4169E1;"><i
-                                class="fa-solid fa-shield-halved"></i></div>
-                        <div class="skill-tag" data-name="CSF" style="--brand: #00f0ff;"><i
-                                class="fa-solid fa-file-shield"></i></div>
-                        <div class="skill-tag" data-name="ISO" style="--brand: #4B0082;"><i
-                                class="fa-solid fa-globe"></i></div>
-                        <div class="skill-tag" data-name="CIS Controls" style="--brand: #32CD32;"><i
-                                class="fa-solid fa-clipboard-check"></i></div>
-                        <div class="skill-tag" data-name="Cyber Kill Chain" style="--brand: #FF4500;"><i
-                                class="fa-solid fa-link-slash"></i></div>
+                        <div class="skill-tag" data-name="HTML5" style="--brand: #E34F26;">
+                            <i class="devicon-html5-plain"></i>
+                            <span class="skill-name">HTML5</span>
+                        </div>
+                        <div class="skill-tag" data-name="CSS3" style="--brand: #1572B6;">
+                            <i class="devicon-css3-plain"></i>
+                            <span class="skill-name">CSS3</span>
+                        </div>
+                        <div class="skill-tag" data-name="NIST" style="--brand: #4169E1;">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span class="skill-name">NIST</span>
+                        </div>
+                        <div class="skill-tag" data-name="CSF" style="--brand: #00f0ff;">
+                            <i class="fa-solid fa-file-shield"></i>
+                            <span class="skill-name">CSF</span>
+                        </div>
+                        <div class="skill-tag" data-name="ISO" style="--brand: #4B0082;">
+                            <i class="fa-solid fa-globe"></i>
+                            <span class="skill-name">ISO</span>
+                        </div>
+                        <div class="skill-tag" data-name="CIS Controls" style="--brand: #32CD32;">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                            <span class="skill-name">CIS</span>
+                        </div>
+                        <div class="skill-tag" data-name="Cyber Kill Chain" style="--brand: #FF4500;">
+                            <i class="fa-solid fa-link-slash"></i>
+                            <span class="skill-name">Kill Chain</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="skill-category reveal">
                     <h3>Tools & Platforms</h3>
                     <div class="skill-tags">
-                        <div class="skill-tag" data-name="Git" style="--brand: #F05032;"><i
-                                class="devicon-git-plain"></i></div>
-                        <div class="skill-tag" data-name="GitHub" style="--brand: #ffffff;"><i
-                                class="devicon-github-original"></i></div>
-                        <div class="skill-tag" data-name="VS Code" style="--brand: #007ACC;"><i
-                                class="devicon-vscode-plain"></i></div>
-                        <div class="skill-tag" data-name="MySQL" style="--brand: #4479A1;"><i
-                                class="devicon-mysql-plain"></i></div>
-                        <div class="skill-tag" data-name="Wireshark" style="--brand: #10b981;"><i
-                                class="fa-solid fa-network-wired"></i></div>
-                        <div class="skill-tag" data-name="Nessus" style="--brand: #ff2424;"><i
-                                class="fa-solid fa-spider"></i></div>
-                        <div class="skill-tag" data-name="Kali Linux" style="--brand: #557C94;"><i
-                                class="devicon-linux-plain"></i></div>
-                        <div class="skill-tag" data-name="Virtual Machine" style="--brand: #b821ff;"><i
-                                class="fa-solid fa-server"></i></div>
-                        <div class="skill-tag" data-name="Metasploit" style="--brand: #ff0055;"><i
-                                class="fa-solid fa-bomb"></i></div>
+                        <div class="skill-tag" data-name="Git" style="--brand: #F05032;">
+                            <i class="devicon-git-plain"></i>
+                            <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-tag" data-name="GitHub" style="--brand: #ffffff;">
+                            <i class="devicon-github-original"></i>
+                            <span class="skill-name">GitHub</span>
+                        </div>
+                        <div class="skill-tag" data-name="VS Code" style="--brand: #007ACC;">
+                            <i class="devicon-vscode-plain"></i>
+                            <span class="skill-name">VS Code</span>
+                        </div>
+                        <div class="skill-tag" data-name="MySQL" style="--brand: #4479A1;">
+                            <i class="devicon-mysql-plain"></i>
+                            <span class="skill-name">MySQL</span>
+                        </div>
+                        <div class="skill-tag" data-name="Wireshark" style="--brand: #10b981;">
+                            <i class="fa-solid fa-network-wired"></i>
+                            <span class="skill-name">Wireshark</span>
+                        </div>
+                        <div class="skill-tag" data-name="Nessus" style="--brand: #ff2424;">
+                            <i class="fa-solid fa-spider"></i>
+                            <span class="skill-name">Nessus</span>
+                        </div>
+                        <div class="skill-tag" data-name="Kali Linux" style="--brand: #557C94;">
+                            <i class="devicon-linux-plain"></i>
+                            <span class="skill-name">Kali Linux</span>
+                        </div>
+                        <div class="skill-tag" data-name="Virtual Machine" style="--brand: #b821ff;">
+                            <i class="fa-solid fa-server"></i>
+                            <span class="skill-name">VM</span>
+                        </div>
+                        <div class="skill-tag" data-name="Metasploit" style="--brand: #ff0055;">
+                            <i class="fa-solid fa-bomb"></i>
+                            <span class="skill-name">Metasploit</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="skill-category reveal">
                     <h3>Soft Skills</h3>
                     <div class="skill-tags">
-                        <div class="skill-tag" data-name="Time Management" style="--brand: #f59e0b;"><i
-                                class="fa-solid fa-clock"></i></div>
-                        <div class="skill-tag" data-name="Leadership" style="--brand: #3b82f6;"><i
-                                class="fa-solid fa-users"></i></div>
-                        <div class="skill-tag" data-name="Problem-Solving" style="--brand: #ec4899;"><i
-                                class="fa-solid fa-puzzle-piece"></i></div>
-                        <div class="skill-tag" data-name="Adaptability" style="--brand: #14b8a6;"><i
-                                class="fa-solid fa-arrows-spin"></i></div>
+                        <div class="skill-tag" data-name="Time Management" style="--brand: #f59e0b;">
+                            <i class="fa-solid fa-clock"></i>
+                            <span class="skill-name">Time</span>
+                        </div>
+                        <div class="skill-tag" data-name="Leadership" style="--brand: #3b82f6;">
+                            <i class="fa-solid fa-users"></i>
+                            <span class="skill-name">Lead</span>
+                        </div>
+                        <div class="skill-tag" data-name="Problem-Solving" style="--brand: #ec4899;">
+                            <i class="fa-solid fa-puzzle-piece"></i>
+                            <span class="skill-name">Problem</span>
+                        </div>
+                        <div class="skill-tag" data-name="Adaptability" style="--brand: #14b8a6;">
+                            <i class="fa-solid fa-arrows-spin"></i>
+                            <span class="skill-name">Adapt</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1094,7 +1140,7 @@
                     <p style="margin-top: 10px;"><span class="terminal-prompt"><i class="fa-solid fa-location-dot"></i>
                             Location:</span> Gorakhpur, UP | Phagwara, Punjab</p>
                     <div style="margin-top: 25px;">
-                        <a href="https://www.linkedin.com/in/krishna-kumar-singh-268a17294/" target="_blank"
+                        <a href="https://www.linkedin.com/in/krishna-kumarsingh/" target="_blank"
                             style="margin-right: 15px;">[ <i class="fa-brands fa-linkedin"></i>LinkedIn ]</a>
                         <a href="https://github.com/Krishna25102007" target="_blank">[ <i
                                 class="fa-brands fa-github"></i>GitHub ]</a>
